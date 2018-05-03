@@ -54,7 +54,7 @@ class QueRecord  ( wx.Frame ):
 		self.SLB = wx.ListBox( self.QRSearch, wx.ID_ANY, wx.DefaultPosition, wx.Size( -1,150 ), SLBChoices, wx.LB_ALWAYS_SB )
 		SBS.Add( self.SLB, 0, wx.ALL|wx.EXPAND, 5 )
 		
-		self.SConText = wx.TextCtrl( self.QRSearch, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.SConText = wx.TextCtrl( self.QRSearch, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.TE_MULTILINE|wx.TE_RICH )
 		SBS.Add( self.SConText, 1, wx.ALL|wx.EXPAND, 5 )
 		
 		self.SUrl = wx.TextCtrl( self.QRSearch, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.TE_READONLY )
@@ -82,7 +82,7 @@ class QueRecord  ( wx.Frame ):
 		self.help = wx.Panel( self.QRListBook, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		bSizer4 = wx.BoxSizer( wx.VERTICAL )
 		
-		self.helpText = wx.TextCtrl( self.help, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( -1,300 ), wx.TE_MULTILINE )
+		self.helpText = wx.TextCtrl( self.help, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( -1,300 ), wx.TE_MULTILINE|wx.TE_READONLY )
 		bSizer4.Add( self.helpText, 1, wx.ALL|wx.EXPAND, 5 )
 		
 		self.savef = wx.StaticText( self.help, wx.ID_ANY, u"保存位置", wx.DefaultPosition, wx.DefaultSize, 0 )

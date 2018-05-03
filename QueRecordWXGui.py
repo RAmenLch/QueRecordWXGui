@@ -3,7 +3,8 @@ import sdydata as sd
 import wx  
 import wx.xrc 
 import webbrowser
-
+import warnings
+warnings.filterwarnings("ignore")
 
 
 
@@ -113,7 +114,7 @@ if __name__ == "__main__":
 		main_win = QRWG(None)  
 		main_win.Show(True)  
 		app.MainLoop()  
-	except Exception as e:
+	except BaseException as e:
 		pass
 	finally:
 		del app
